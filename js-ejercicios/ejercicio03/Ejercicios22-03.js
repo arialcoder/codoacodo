@@ -70,37 +70,62 @@ btnRun.addEventListener('click', ()=>{
 //nombre.charAt();
 //nombre.length;
 
+const btn3 = document.getElementById("btn3");
 
+btn3.addEventListener("click", () => {
 
+    const nombre = prompt("Ingresa tu nombre:");
 
-const nombre = prompt("Ingresa tu nombre:");
+    document.getElementById("letra").innerHTML= nombre.length;
 
+    const MAX = nombre.length;
+    const MIN = 0
 
-document.getElementById("letra").innerHTML= nombre.length;
+    console.log(MAX);
+    console.log(MIN);
 
+    const num = Math.floor(Math.random() * (MAX - MIN + 1)) + MIN;
 
+    console.log(num);
 
-const MAX = nombre.length;
-const MIN = 0
+    const letraRandom = nombre.charAt(num);
 
-console.log(MAX);
-console.log(MIN);
+    alert(`${letraRandom}`)
 
-const num = Math.floor(Math.random() * (MAX - MIN + 1)) + MIN;
+    console.log(letraRandom);
+    document.getElementById("letra").innerHTML= `Letra aleatoria: <b>${letraRandom}</b>`;
 
-console.log(num);
-
-
-const letraRandom = nombre.charAt(num);
-
-alert(`${letraRandom}`)
-
-console.log(letraRandom);
-document.getElementById("letra").innerHTML= `<h4>${letraRandom}</h4>`;
-
+});
 
 /* Ejercicio 3
 Calculamos un número aleatorio en un rango comprendido entre 0 y el número de letras de tu nombre.
 Utilizamos ese número aleatorio para obtener la letra de tu nombre que ocupa esa posición.
 Mostramos la letra en la pagina. */
+
+const btn4 = document.getElementById("btn4");
+btn4.addEventListener("click", () => {
+
+
+    const nombre = prompt("Ingresa tu nombre:");
+
+    const min = 0;
+    const max = nombre.length;
+
+    const num = Math.floor(Math.random() * (max - min + 1)) + min;
+
+
+    const letraPosicion = nombre.charAt(num);
+
+    console.log(letraPosicion) ;
+
+    document.getElementById("num4").innerHTML= `Nombre: <b>${nombre}</b> Numero aleatorio: <b>${num}</b>
+    Letra en esa posicion: <b>${letraPosicion} </b>`
+
+});
+
+
+
+
+
+
 
